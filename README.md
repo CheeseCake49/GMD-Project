@@ -5,7 +5,7 @@
 
 ## Blog posts:
 1. *blog1 (Roll a ball)* 
-2. [Blog 02 - Design Paper](blog/Blog01.md)
+2. [Blog 02 - Design Paper](blog/Blog02.md)
 3. *blog3*
 4. *blog4*
 5. *blog5*
