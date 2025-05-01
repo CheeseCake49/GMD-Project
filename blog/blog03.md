@@ -12,7 +12,7 @@ These past weeks, We focused on the environment and visual elements for the firs
 
 ## TO-DO
 - [ ] Make the first scene(including interior)
-- [ ] Movement and camera
+- [X] Movement and camera
 - [ ] Open close door + Loop
 - [ ] Interact on E
 - [ ] Begin writing down what kind of game objects we want in the game (puzzles)
