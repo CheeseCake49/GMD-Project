@@ -30,7 +30,7 @@ version: "0.2"
 | Field           | Description                   |
 |-----------------|-------------------------------|
 | Core Loops | The player will explore the shifting environment, solve puzzles, and collect fragments of memory to understand the underlying story. |
-| Objectives and Progression | - The player moves through three phases—utopia, glitch-reality, and dystopia—each gradually revealing the truth about their digital existence. Along the way, they encounter hidden symbols, corrupted files, and fragmented clues. In the final scene, the player accesses a terminal where they find a file representing themselves. If they attempt to delete it by dragging it to the trash, a pop-up appears asking for a password—one they’ve unknowingly been collecting clues for throughout the game. |
+| Objectives and Progression | The player moves through three phases—utopia, glitch-reality, and dystopia—each gradually revealing the truth about their digital existence. Along the way, they encounter hidden symbols, corrupted files, and fragmented clues. In the final scene, the player accesses a terminal where they find a file representing themselves. If they attempt to delete it by dragging it to the trash, a pop-up appears asking for a password—one they’ve unknowingly been collecting clues for throughout the game. |
 | Game Systems | - Exploration <br> - Puzzle-solving <br> - Dialogue and story choices <br> - Memory collection (to unlock backstory) |
 | Interactivity | - The player can move in all directions using first-person controls <br> - Interact with objects <br> - Solve environmental puzzles to unlock new areas and memories |
 
