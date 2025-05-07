@@ -19,7 +19,7 @@ version: "0.2"
 
 | Field           | Description                   |
 |-----------------|-------------------------------|
-| Player Experience and Game POV         | The game is experienced through a **first-person perspective**, within a hallway/house setting that subtly transforms across three distinct phases—from utopia through glitches, culminating in dystopia.                 |
+| Player Experience and Game POV         | The game is experienced through a **first-person perspective**, set within a confined hallway or house-like environment that subtly transforms across three distinct phases—from utopia, through glitch-reality, and finally into dystopia. At the end of the hallway is a door, and passing through it loops the player back to the starting point. This looping effect reinforces the feeling of being trapped in a simulation, subtly suggesting that there is nothing beyond the hallway—only repetition and confinement within the digital system.                 |
 | Visual and Audio Style | Magical and surreal — vibrant colors, glowing elements, and atmospheric sounds with soft magical chimes. As the player progresses, the environment gradually shifts to a more realistic setting with muted tones and subtle visual glitches, accompanied by darker, more haunting music to reflect the growing tension and awareness. |
 | Game World Fiction | Players awaken in an idyllic virtual setting unaware that their consciousness has been digitized. And will later progress to a glitched reality and a chaotic dystopia, as their awareness of the reality of their existence gradually increases|
 | Platform(s), Technology, and Scope (brief) | PC and Arcade, 3D using Unity Editor, created with a focus on exploration, mystery, and puzzle-solving. |
