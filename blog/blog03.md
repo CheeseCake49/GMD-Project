@@ -30,3 +30,54 @@ Our main goals for this blog has been:
 After importing a few furniture/exterior/interior assets, We started assembling/planning the interior of what will be the main scene: a looping hallway/house. 
 
 
+## Code
+###PlayerController
+We began by implementing the characte controller. This script handles mouse/look input using Unity’s Input System, locks the cursor, and rotates both the camera and player body:
+
+```csharp
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class PlayerController : MonoBehaviour
+{
+    [Header("Sensitivity")]
+    [SerializeField] private float sensX = 100f;
+    [SerializeField] private float sensY = 100f;
+
+    [Header("References")]
+    [SerializeField] private Camera camera;
+    [SerializeField] private Transform orientation;
+
+    private float xRotation;
+    private float yRotation;
+    
+    void Start()
+    {
+        // Lock and hide the cursor for FPS control
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    void FixedUpdate()
+    {
+        // Clamp vertical look to avoid flipping
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        // Apply rotations: camera pitches, body yaws
+        camera.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+        orientation.rotation    = Quaternion.Euler(0,           yRotation, 0);
+    }
+
+    // Called by the Input System’s “Look” action
+    void OnLook(InputValue value)
+    {
+        Vector2 camMovement = value.Get<Vector2>();
+        yRotation += camMovement.x * Time.deltaTime * sensX;
+        xRotation -= camMovement.y * Time.deltaTime * sensY;
+    }
+}
+
+
+
+
+
