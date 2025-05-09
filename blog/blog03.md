@@ -31,8 +31,8 @@ After importing a few furniture/exterior/interior assets, We started assembling/
 
 
 ## Code
-###PlayerController
-We began by implementing the characte controller. This script handles mouse/look input using Unity’s Input System, locks the cursor, and rotates both the camera and player body:
+### PlayerController
+We began by implementing the character controller. This script handles mouse/look input using Unity’s Input System, locks the cursor, and rotates both the camera and player body:
 
 ```csharp
 using UnityEngine;
@@ -76,8 +76,179 @@ public class PlayerController : MonoBehaviour
         xRotation -= camMovement.y * Time.deltaTime * sensY;
     }
 }
+```
+- sensX/Y control horizontal and vertical look speed.
+- camera is the player’s eyes; orientation is the body transform for movement direction.
+- OnLook() reads pointer delta and accumulates rotations each frame.
 
+### Playerinteraction
 
+We built a interaction system that lets the player open doors, read letters and more by simply looking at them and pressing E. It’s handled through a mix of trigger zones and raycasting.
 
+The script is attached to the player's camera and continuously checks whether the player is looking at something interactable. If so, a UI prompt appears to indicate the player can interact. When the player presses E, it either opens a nearby door or shows the content of a letter, depending on what they’re looking at.
 
+Here’s the full script:
 
+```csharp
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class PlayerInteraction : MonoBehaviour
+{
+    public float interactionDistance;
+    public GameObject interactionText;
+    public LayerMask interactionLayers;
+    private DoorInteraction nearbyDoor;
+
+    // This is called by the Input System when "Interact" (E key) is pressed
+    void OnInteract()
+    {
+        Debug.Log("Interact Pressed");
+
+        if (nearbyDoor != null)
+        {
+            nearbyDoor.ToggleDoor();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Entered trigger with " + other.name);
+
+        DoorInteraction door = other.GetComponentInParent<DoorInteraction>();
+        if (door != null)
+        {
+            Debug.Log("Found door script on " + door.name);
+            nearbyDoor = door;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        DoorInteraction door = other.GetComponentInParent<DoorInteraction>();
+        if (door != null && door == nearbyDoor)
+        {
+            nearbyDoor = null;
+        }
+    }
+
+    void Update()
+    {
+        // RaycastHit variable which will collect information from objects 
+        RaycastHit hit;
+
+        // If the raycast hits something
+        if (Physics.Raycast(transform.position, transform.forward, out hit, interactionDistance, interactionLayers))
+        {
+            // If the object it hit contains the Letter script
+            if (hit.collider.gameObject.GetComponent<Letter>())
+            {
+                // Enable the interaction text
+                interactionText.SetActive(true);
+
+                // If the E key is pressed
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    // Call openCloseLetter on the Letter component
+                    hit.collider.gameObject.GetComponent<Letter>().openCloseLetter();
+                }
+            }
+            else
+            {
+                interactionText.SetActive(false);
+            }
+        }
+        else
+        {
+            interactionText.SetActive(false);
+        }
+    }
+}
+```
+- Trigger zones are used for doors: when the player enters a collider near a door, the script stores a reference to that door so it can be toggled when pressing E.
+- Raycasting is used for anything in front of the player: when the player looks at a letter (within a certain distance), the script shows a UI prompt and listens for the E key to open the letter.
+- The system is built to be expandable—later we can add puzzles that respond the same way.
+
+### Player Movement
+To handle walking, we implemented a simple Rigidbody-based movement system using Unity’s Input System. The movement logic is handled by the PlayerMovement script, which reacts to directional input and applies motion through the physics system.
+
+Here’s the core of the script:
+```csharp
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class PlayerMovement : MonoBehaviour
+{
+    [SerializeField] private Rigidbody rigidbody;
+    [SerializeField] private Transform orientation;
+    [SerializeField] private float speed = 1f;
+
+    private Vector2 playerInput;
+
+    void OnMove(InputValue value)
+    {
+        playerInput = value.Get<Vector2>();
+    }
+
+    void FixedUpdate()
+    {
+        Vector3 moveDirection = orientation.forward * playerInput.y + orientation.right * playerInput.x;
+        Vector3 movement = moveDirection.normalized * speed * Time.fixedDeltaTime;
+
+        rigidbody.MovePosition(rigidbody.position + movement);
+    }
+}
+```
+- OnMove() receives input from Unity’s Input System and stores it as a 2D Vector.
+- In FixedUpdate(), that input is converted into world-space movement relative to the player’s orientation (which is rotated by the camera).
+- The player is moved using Rigidbody.MovePosition, ensuring physics-based motion.
+
+### Letter script
+To give the player access to narrative clues and atmosphere, we created a system where you can interact with physical letters in the environment. When you look at a letter and press E, the 3D model disappears and is replaced with a full-screen UI version of the letter, making it easier to read. 
+This is handled by a Letter script:
+```csharp
+using UnityEngine;
+
+public class Letter : MonoBehaviour
+{
+    public GameObject letterUI;
+    public Renderer letterMesh;
+    public PlayerController player;
+
+    private bool toggle;
+
+    public void openCloseLetter()
+    {
+        // Flip the toggle state
+        toggle = !toggle;
+
+        // If closing the letter
+        if (!toggle)
+        {
+            letterUI.SetActive(false);
+            letterMesh.enabled = true;
+            player.enabled = true;
+        }
+
+        // If opening the letter
+        if (toggle)
+        {
+            letterUI.SetActive(true);
+            letterMesh.enabled = false;
+            player.enabled = false;
+        }
+    }
+}
+```
+- The script keeps track of whether the letter is currently being read.
+- When openCloseLetter() is called (from the player’s interaction raycast), the script toggles:
+  - The UI panel, which displays the content of the letter in full-screen.
+  - The physical mesh, which disappears while reading.
+  - The PlayerController, which is disabled while reading to lock camera movement.
+    
+## UI
+
+## Assets
+
+## Floor Plan
+Insert image
