@@ -7,7 +7,7 @@ public class Letter : MonoBehaviour
     bool toggle;
 
     public Renderer letterMesh;
-    public PlayerController player;
+    public PlayerMovement player;
 
 
     public void openCloseLetter()
