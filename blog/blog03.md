@@ -14,8 +14,10 @@ These past weeks, We focused on the environment and visual elements for the firs
 - [ ] Make the first scene(including interior)
 - [X] Movement and camera
 - [ ] Open close door + Loop
-- [ ] Interact on E
+- [X] Interact on E
 - [ ] Begin writing down what kind of game objects we want in the game (puzzles)
+- [ ] See if collision detection can be made more smooth to avoid snapping back and forth when walking into a wall
+- [ ] Find better solution for closing letter
 
 ## Progress Overview
 Our main goals for this blog has been:
