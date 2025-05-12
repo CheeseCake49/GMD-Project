@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Letter : MonoBehaviour
+public class Letter : MonoBehaviour, IInteractable
 {
     public GameObject letterUI;
 
@@ -30,5 +30,10 @@ public class Letter : MonoBehaviour
             letterMesh.enabled = false;
             player.enabled = false;
         }
+    }
+
+    public void Interact()
+    {
+        openCloseLetter();
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DoorInteraction : MonoBehaviour
+public class DoorInteraction : MonoBehaviour, IInteractable
 {
     public Transform hinge; 
     public float openAngle = 90f;
@@ -30,5 +30,10 @@ public class DoorInteraction : MonoBehaviour
     public void ToggleDoor()
     {
         isOpen = !isOpen;
+    }
+
+    public void Interact()
+    {
+        ToggleDoor();
     }
 }
