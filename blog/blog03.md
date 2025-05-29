@@ -249,6 +249,38 @@ public class Letter : MonoBehaviour
   - The PlayerController, which is disabled while reading to lock camera movement.
     
 ## UI
+We used Unity’s built-in UI system to enhance player interaction. All UI elements are managed under a single Canvas and appear contextually.
+
+### Interaction Prompt
+
+A small piece of UI appears when the player looks at something interactable, like a door or letter. This is just a simple `GameObject` with a `Text` or `Image` component placed inside the canvas, set to appear when a valid object is detected by raycasting.
+
+This is how it works:
+- The UI prompt is initially disabled.
+- When the `PlayerInteraction` script detects something with an `IInteractable` component, the prompt is shown.
+- When the player looks away, it disappears again.
+
+This kind of reactive UI keeps players aware of what they can do.
+
+### Letter Reading
+
+When reading a letter, the UI takes over the whole screen to show a clean, readable version of the letter. We implemented this with a fullscreen UI panel that is toggled on and off by the `Letter` script.
+
+This UI panel contains:
+- A background image of the letter texture.
+- A close instruction (e.g. “Press E to close”).
+
+To keep focus, the `PlayerController` is disabled while the UI is active, preventing movement and camera input.
+
+### Puzzle UI
+
+We’ve started preparing another piece of UI for our puzzle interaction. Like the letter system, it’s a canvas-based UI that becomes visible when the player interacts with a puzzle object (e.g., a picture frame on a table).
+
+Right now, the UI includes:
+- A square grid layout to contain the puzzle tiles.
+- Logic to detect clicks, move tiles, and check if the puzzle is solved
+
+We plan to continue using this modular UI approach throughout the game—keeping each interface contextual, toggled via interaction, and easy to manage through scripts.
 
 ## Assets
 
