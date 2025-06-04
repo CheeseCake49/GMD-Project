@@ -12,16 +12,13 @@ public class SceneTransition : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("SceneTransitionManager Awake in scene: " + SceneManager.GetActiveScene().name);
         if (Instance == null)
         {
             Instance = this;
-            Debug.Log("Set instance");
             DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Debug.Log("Destroying object");
             Destroy(gameObject);
         }
     }
@@ -39,7 +36,6 @@ public class SceneTransition : MonoBehaviour
         
         AsyncOperation loadOp = SceneManager.LoadSceneAsync(sceneToLoad);
         yield return loadOp;
-        Debug.Log("Scene loaded: " + SceneManager.GetActiveScene().name);
         
         yield return null;
 
