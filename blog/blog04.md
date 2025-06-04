@@ -10,12 +10,13 @@ version: "0.1"
 ## Introduction
 
 ## TO-DO
-- [ ] Make the second scene(including interior)
-- [ ] Make the third scene(including interior)
-- [ ] Loop through scenes + Canvas/fade out
-- [ ] Counter ?
+- [X] Make the second scene(including interior)
+- [X] Make the third scene(including interior)
+- [X] Loop through scenes + Canvas/fade out
 - [ ] Add sound to the different scenes 
 
 ## Progress Overview
 Our main goals for this blog has been:
-
+To create the majority of the game world. 
+The fundamental looping logic to move between the different scenes has been created. 
+The remaining scenes have been created and the first scene has been refined.
