@@ -12,6 +12,7 @@ version: "0.1"
 ## TO-DO
 - [ ] Make the Puzzles
 - [ ] Lightning
+- [ ] Create a menu
 
 ## Progress Overview
 Our main goals for this blog has been:
