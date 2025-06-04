@@ -1,1 +1,17 @@
+---
+title: "Blog 5 Developer Post"
+author: "Johan & Simone"
+date: "20-05-2024"
+version: "0.1"
+---
 
+# Game Development Progress Report
+
+## Introduction
+
+## TO-DO
+- [ ] Make the Puzzles
+- [ ] Lightning
+
+## Progress Overview
+Our main goals for this blog has been:
