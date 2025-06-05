@@ -10506,7 +10506,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &1066036762
@@ -10537,7 +10537,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 363860257}
-  - {fileID: 1564381404}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1069590489 stripped
@@ -15802,11 +15801,11 @@ Transform:
   m_GameObject: {fileID: 1564381401}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.423388, y: -0.9959517, z: 12.16151}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1066036763}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1573608335
 PrefabInstance:
@@ -21078,6 +21077,7 @@ SceneRoots:
   - {fileID: 223788087}
   - {fileID: 259406242}
   - {fileID: 384185032}
+  - {fileID: 1564381404}
   - {fileID: 2028635674}
   - {fileID: 1121659220}
   - {fileID: 1812114367}
