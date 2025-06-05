@@ -4,7 +4,7 @@
  -- *youtube link* -- 
 
 ## Blog posts:
-1. Blog 01 - Roll A Ball [Johan](blog/RollABall_Johan.md) [Simone](blog/RollABall_Simone)
+1. Blog 01 - Roll A Ball [Johan](blog/RollABall_Johan.md) [Simone](blog/blog01.md)
 2. [Blog 02 - Design Paper](blog/blog02.md)
 3. [Blog 03 - Dev update #1](blog/blog03.md)
 4. [Blog 04 - Dev update #2](blog/blog04.md)
