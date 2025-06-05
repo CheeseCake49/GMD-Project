@@ -13,8 +13,8 @@ version: "0.1"
 - [X] Puzzle Slide
 - [ ] Puzzle for 2nd scene
 - [ ] Puzzle Computer
-- [X] Lightning
-- [ ] Create a menu
+- [X] Lighting
+- [X] Create a menu
 
 ## Progress Overview
 Our main goals for this blog has been:
