@@ -10,8 +10,10 @@ version: "0.1"
 ## Introduction
 
 ## TO-DO
-- [ ] Make the Puzzles
-- [ ] Lightning
+- [X] Puzzle Slide
+- [ ] Puzzle for 2nd scene
+- [ ] Puzzle Computer
+- [X] Lightning
 - [ ] Create a menu
 
 ## Progress Overview
