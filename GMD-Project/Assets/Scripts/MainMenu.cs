@@ -7,16 +7,11 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject menuUI;
     public Button startButton;
-    private bool isPaused = true;
-
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+    public bool isPaused = true;
 
     void Start()
     {
-        PauseGame();
+        OnToggleMenu();
     }
 
     public void StartGame()
@@ -38,7 +33,7 @@ public class MainMenu : MonoBehaviour
             PauseGame();
     }
 
-    private void PauseGame()
+    public void PauseGame()
     {
         Debug.Log("Pausing game");
         Time.timeScale = 0f;
@@ -51,7 +46,7 @@ public class MainMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(startButton.gameObject);
     }
 
-    private void ResumeGame()
+    public void ResumeGame()
     {
         Debug.Log("Resuming game");
         Time.timeScale = 1f;

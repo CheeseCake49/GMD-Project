@@ -10514,7 +10514,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1066036763}
   - component: {fileID: 1066036762}
-  - component: {fileID: 1066036761}
   m_Layer: 0
   m_Name: MainMenuHandler
   m_TagString: Untagged
@@ -10522,36 +10521,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1066036761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066036760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: UI
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &1066036762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10566,6 +10535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuUI: {fileID: 363860256}
   startButton: {fileID: 1249200340}
+  isPaused: 0
 --- !u!4 &1066036763
 Transform:
   m_ObjectHideFlags: 0
@@ -21186,6 +21156,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3995947114657612104, guid: ba9db3098b8157e4aa56668a54c309fd, type: 3}
+      propertyPath: sensX
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995947114657612104, guid: ba9db3098b8157e4aa56668a54c309fd, type: 3}
+      propertyPath: sensY
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4549998777327513320, guid: ba9db3098b8157e4aa56668a54c309fd, type: 3}
       propertyPath: m_Name
       value: Player
@@ -21197,6 +21175,14 @@ PrefabInstance:
     - target: {fileID: 6884723202662408305, guid: ba9db3098b8157e4aa56668a54c309fd, type: 3}
       propertyPath: m_IsKinematic
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7207848106031610976, guid: ba9db3098b8157e4aa56668a54c309fd, type: 3}
+      propertyPath: m_UIInputModule
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7207848106031610976, guid: ba9db3098b8157e4aa56668a54c309fd, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Gamepad
       objectReference: {fileID: 0}
     - target: {fileID: 7207848106031610976, guid: ba9db3098b8157e4aa56668a54c309fd, type: 3}
       propertyPath: m_NotificationBehavior
@@ -21343,6 +21329,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   cameraPosition: {fileID: 2798563651866318965}
+  menu: {fileID: 1066036762}
 --- !u!114 &2798563651866318979 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3995947114657612104, guid: ba9db3098b8157e4aa56668a54c309fd, type: 3}

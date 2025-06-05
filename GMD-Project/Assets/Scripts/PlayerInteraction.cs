@@ -40,7 +40,16 @@ public class PlayerInteraction : MonoBehaviour
         currentTarget = null;
         interactionText.SetActive(false);
     }
-    
+
+
+    [SerializeField] private MainMenu menu;
+    private void OnToggleMenu()
+    {
+        if (menu.isPaused)
+            menu.ResumeGame();
+        else
+            menu.PauseGame();
+    }
 }
 
 
