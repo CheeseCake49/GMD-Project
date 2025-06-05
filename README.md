@@ -12,8 +12,10 @@
 6. *blog6*
 
 ## Third party assets:
-* *Item 1*
-* *Item 2*
+* [*Item 1*](https://assetstore.unity.com/packages/3d/environments/stylized-bedroom-kit-308050)
+* [*Item 2*](https://assetstore.unity.com/packages/3d/props/interior/pandazole-home-interior-low-poly-pack-203033)
+* [*Item 3*](https://assetstore.unity.com/packages/3d/environments/apartment-kit-124055)
+* [*Item 4*]([(https://assetstore.unity.com/packages/3d/props/interior/free-wood-door-pack-280509)])
 
 ## WebGL build:
  -- *optional gitHub pages link* -- 
