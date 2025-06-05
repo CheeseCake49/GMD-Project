@@ -1,7 +1,4 @@
-using System;
-using UnityEditor.Rendering.LookDev;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerInteraction : MonoBehaviour
 {
