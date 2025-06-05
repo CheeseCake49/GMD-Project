@@ -68,7 +68,7 @@ public void Init(Vector2Int pos, SlidingPuzzle puzzle)
 }
 ```
 
-##Puzzle Computer
+## Puzzle Computer
 
 For the final puzzle interaction in the third scene, we created a computer interface that allows the player to trigger a simulated system deletion. This interaction marks the narrative climax where the player must choose to terminate or escape the simulated world. (It should be said that we didn't achive this 100%) Our first thoughts was that to delete the user you would need a password, there was to find in the world. But we unfortunately did not have time to implement this part.  
 
@@ -123,5 +123,5 @@ public class FinalScreenMenu : MonoBehaviour
 ```
 
 
-##Menu
+## Menu
 
