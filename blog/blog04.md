@@ -13,7 +13,7 @@ version: "0.1"
 - [X] Make the second scene(including interior)
 - [X] Make the third scene(including interior)
 - [X] Loop through scenes + Canvas/fade out
-- [ ] Add sound to the different scenes 
+- [X] Add sound to the different scenes 
 
 ## Progress Overview
 Our main goals for this blog has been:
