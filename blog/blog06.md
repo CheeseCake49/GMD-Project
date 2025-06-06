@@ -7,7 +7,7 @@ version: "0.1"
 
 # Show off the final game product
 
-[Watch the Video Here!](Insert link)
+[Watch the Video Here!](https://www.youtube.com/watch?v=25Tu8uxpCHk)
 
 # Conclusion
 As we reflect on the completion of this project, we recognize that the final result is not exactly the game we originally set out to create. Our early ambitions were broader and more complex, and throughout the development process, we had to make tough decisions, cut features, and simplify ideas in order to meet our deadline and technical limitations we faced.
