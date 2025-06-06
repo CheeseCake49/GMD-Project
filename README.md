@@ -9,7 +9,7 @@
 3. [Blog 03 - Dev update #1](blog/blog03.md)
 4. [Blog 04 - Dev update #2](blog/blog04.md)
 5. [Blog 05 - Dev update #3](blog/blog05.md)
-6. *blog6*
+6. [Blog 06 - Final game product and concludes the project](blog/blog06.md)
 
 ## Third party assets:
 * [*Item 1*](https://assetstore.unity.com/packages/3d/environments/stylized-bedroom-kit-308050)
