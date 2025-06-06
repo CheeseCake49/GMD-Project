@@ -1,7 +1,7 @@
 # GMD-Project
 
 ## Demonstration:
- -- *youtube link* -- 
+[Watch the Video Here!](https://www.youtube.com/watch?v=25Tu8uxpCHk) 
 
 ## Blog posts:
 1. Blog 01 - Roll A Ball [Johan](blog/RollABall_Johan.md) [Simone](blog/blog01.md)
@@ -12,10 +12,10 @@
 6. [Blog 06 - Final game product and concludes the project](blog/blog06.md)
 
 ## Third party assets:
-* [*Item 1*](https://assetstore.unity.com/packages/3d/environments/stylized-bedroom-kit-308050)
-* [*Item 2*](https://assetstore.unity.com/packages/3d/props/interior/pandazole-home-interior-low-poly-pack-203033)
-* [*Item 3*](https://assetstore.unity.com/packages/3d/environments/apartment-kit-124055)
-* [*Item 4*]([(https://assetstore.unity.com/packages/3d/props/interior/free-wood-door-pack-280509)])
+* [stylized-bedroom-kit](https://assetstore.unity.com/packages/3d/environments/stylized-bedroom-kit-308050)
+* [pandazole-home-interior-low-poly-pack](https://assetstore.unity.com/packages/3d/props/interior/pandazole-home-interior-low-poly-pack-203033)
+* [apartment-kit](https://assetstore.unity.com/packages/3d/environments/apartment-kit-124055)
+* [free-wood-door-pack]([(https://assetstore.unity.com/packages/3d/props/interior/free-wood-door-pack-280509)])
 
 ## WebGL build:
  -- *optional gitHub pages link* -- 
