@@ -283,4 +283,4 @@ Right now, the UI includes:
 We plan to continue using this modular UI approach throughout the game—keeping each interface contextual, toggled via interaction, and easy to manage through scripts.
 
 ## Floor Plan
-![Game Design Map](/blog/resources/Plan floor.png)
+![Floor Plan](/blog/resources/PlanFloor.png)
