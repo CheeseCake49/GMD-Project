@@ -15,7 +15,7 @@
 * [stylized-bedroom-kit](https://assetstore.unity.com/packages/3d/environments/stylized-bedroom-kit-308050)
 * [pandazole-home-interior-low-poly-pack](https://assetstore.unity.com/packages/3d/props/interior/pandazole-home-interior-low-poly-pack-203033)
 * [apartment-kit](https://assetstore.unity.com/packages/3d/environments/apartment-kit-124055)
-* [free-wood-door-pack]([(https://assetstore.unity.com/packages/3d/props/interior/free-wood-door-pack-280509)])
+* [free-wood-door-pack](https://assetstore.unity.com/packages/3d/props/interior/free-wood-door-pack-280509)
 
 ## WebGL build:
  -- *optional gitHub pages link* -- 
